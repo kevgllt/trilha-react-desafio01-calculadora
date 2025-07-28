@@ -1,70 +1,51 @@
-# Getting Started with Create React App
+# Calculadora Funcional com React
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+![Calculadora Responsiva](https://i.imgur.com/74c6aa.png) ## 📝 Descrição
 
-## Available Scripts
+Este projeto é uma calculadora totalmente funcional desenvolvida como um exercício prático para solidificar conceitos de **React**, **Styled Components** e **desenvolvimento responsivo**. 
+A aplicação apresenta uma interface limpa, código componentizado e uma lógica de estado bem definida, isolada em um hook customizado.
 
-In the project directory, you can run:
+## ✨ Features
 
-### `npm start`
+* **Operações Básicas**: Adição, Subtração, Multiplicação e Divisão.
+* **Design Responsivo**: A interface se adapta de forma fluida a diferentes tamanhos de tela, de desktops a dispositivos móveis.
+* **Acessibilidade**: Utiliza unidades `rem` para que a interface respeite as configurações de tamanho de fonte do navegador do usuário.
+* **Código Limpo**: Clara separação entre lógica (hooks) e apresentação (componentes).
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## 🚀 Tecnologias Utilizadas
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+* **React.js**: Biblioteca principal para a construção da interface do usuário.
+* **Vite**: Ferramenta de build moderna e rápida para o desenvolvimento front-end.
+* **Styled Components**: Para estilização CSS-in-JS, permitindo a criação de componentes de UI dinâmicos e com escopo definido.
+* **JavaScript (ES6+)**: Linguagem base para toda a lógica do projeto.
 
-### `npm test`
+## 🧠 Lógica da Calculadora
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+O cérebro da aplicação reside no hook customizado **`useMathLogic.js`**. Ele gerencia o estado da calculadora através de três variáveis `useState`: `currentNumber` (o valor no visor), `firstNumber` (o primeiro operando) e `operator` (a operação matemática). Cada clique em um botão dispara uma função que manipula esses estados de forma controlada para executar os cálculos corretamente.
 
-### `npm run build`
+O fluxo de um cálculo (`A [op] B = C`) acontece da seguinte maneira:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+1.  O usuário digita o número `A`. Este valor é armazenado em `currentNumber`.
+2.  O usuário clica em um operador `[op]`. O valor de `currentNumber` é movido para `firstNumber`, e o operador é salvo. O visor é limpo para a entrada do próximo número.
+3.  O usuário digita o número `B`, que é armazenado em `currentNumber`.
+4.  Ao clicar em `=`, a função `handleEquals` executa a operação entre `firstNumber` e `currentNumber` com base no `operator` salvo. O resultado `C` é então exibido no visor (`currentNumber`).
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## 📦 Como Executar
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Este projeto foi criado utilizando [Vite](https://vitejs.dev/). Para rodá-lo localmente, siga os passos abaixo:
 
-### `npm run eject`
+```bash
+# 1. Clone o repositório
+git clone [https://github.com/seu-usuario/seu-repositorio.git](https://github.com/seu-usuario/seu-repositorio.git)
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+# 2. Navegue até o diretório do projeto
+cd seu-repositorio
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+# 3. Instale todas as dependências necessárias
+npm install
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+# 4. Inicie o servidor de desenvolvimento com Vite
+npm run dev
+```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Após executar o último comando, a aplicação estará disponível em seu navegador no endereço `http://localhost:5173` (porta padrão do Vite) ou em outra porta, caso a 5173 já esteja em uso.
