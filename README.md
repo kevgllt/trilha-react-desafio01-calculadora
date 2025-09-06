@@ -1,6 +1,8 @@
 # Calculadora Funcional com React
 
-![Calculadora Responsiva](https://i.imgur.com/NOq9sD5.png) 
+<p align="center">
+  <img src="https://i.imgur.com/NOq9sD5.png" alt="Imagem Caluladora" width="600">
+</p>
 
 ## 📝 Descrição
 
