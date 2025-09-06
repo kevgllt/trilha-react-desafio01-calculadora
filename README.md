@@ -1,6 +1,8 @@
 # Calculadora Funcional com React
 
-![Calculadora Responsiva](https://i.imgur.com/74c6aa.png) ## 📝 Descrição
+![Calculadora Responsiva](https://i.imgur.com/NOq9sD5.png) 
+
+## 📝 Descrição
 
 Este projeto é uma calculadora totalmente funcional desenvolvida como um exercício prático para solidificar conceitos de **React**, **Styled Components** e **desenvolvimento responsivo**. 
 A aplicação apresenta uma interface limpa, código componentizado e uma lógica de estado bem definida, isolada em um hook customizado.
